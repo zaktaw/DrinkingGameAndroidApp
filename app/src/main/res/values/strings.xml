@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">DrinkingGame</string>
+
+    <!-- MainActivity-->
     <string name="start_game">Start game</string>
     <string name="game_title">Drinking game</string>
     <string name="settings">Settings</string>
+
+    <!-- AddPlayers-->
+    <string name="title_add_players">Add players</string>
+    <string name="button_add_player">Add</string>
+    <string name="text_view_players">Players:</string>
 </resources>
