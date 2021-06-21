@@ -3,10 +3,14 @@ package com.example.drinkinggame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
+
+import java.util.ArrayList;
 
 public class AddPlayers extends AppCompatActivity {
 
@@ -20,12 +24,15 @@ public class AddPlayers extends AppCompatActivity {
 
         textViewplayers = findViewById(R.id.textViewPlayers);
         inputPlayer = findViewById(R.id.inputPlayer);
+
+        textViewplayers.setText(Players.playersToString());
     }
 
     public void addPlayer(View v) {
-        String player = inputPlayer.getText().toString();
-        String players = textViewplayers.getText().toString() + "\n";
-        players += "\n" + player;
-        textViewplayers.setText(players);
+        String name = inputPlayer.getText().toString();
+        Player player = new Player(name);
+        Players.addPlayer(player);
+        textViewplayers.setText(Players.playersToString());
+        Log.d("addPlayer", "Added player " + name);
     }
 }

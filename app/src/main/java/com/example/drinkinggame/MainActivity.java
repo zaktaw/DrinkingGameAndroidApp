@@ -7,12 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.drinkinggame.models.Players;
+
 public class MainActivity extends AppCompatActivity {
+
+    public Players players;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        players = new Players();
     }
 
     public void startGame(View v) {
