@@ -9,10 +9,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.drinkinggame.models.Players;
+import com.example.drinkinggame.models.ShopObject;
+import com.example.drinkinggame.models.ShopObjects;
 
 public class MainActivity extends AppCompatActivity {
 
     public Players players;
+    public ShopObjects shopObjects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         players = new Players();
         Log.d("players", "Instansiated players");
+
+        shopObjects = new ShopObjects();
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_1), 200));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_2), 300));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_3), 400));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_4), 500));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_5), 600));
     }
 
     public void goToAddPlayers(View v) {
