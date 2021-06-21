@@ -38,7 +38,7 @@ public class AddPlayers extends AppCompatActivity {
     }
 
     public void startGame(View v) {
-        Intent intent = new Intent(this, RoundStart.class);
+        Intent intent = new Intent(this, PlayerSelectionPhase.class);
         startActivity(intent);
     }
 }

@@ -2,6 +2,7 @@ package com.example.drinkinggame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,29 +14,32 @@ import com.example.drinkinggame.models.Players;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class RoundStart extends AppCompatActivity {
+public class PlayerSelectionPhase extends AppCompatActivity {
 
     TextView textViewCurrentPlayer;
     Random random = new Random();
+    int currentPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_round_start);
+        setContentView(R.layout.activity_player_selection_phase);
 
         textViewCurrentPlayer = findViewById(R.id.textViewCurrentPlayer);
         updateCurrentPlayer();
     }
 
     public void goToShopPhase(View v) {
-        updateCurrentPlayer();
+        Intent intent = new Intent(this, ShopPhase.class);
+        intent.putExtra("currentPlayer", currentPlayer);
+        startActivity(intent);
     }
 
     // choose a random player and update text view that shows who the current player is
     void updateCurrentPlayer() {
-        ArrayList players = Players.getPlayers();
-        int randNum = random.nextInt(players.size());
-        Player player = (Player) players.get(randNum);
+        ArrayList<Player> players = Players.getPlayers();
+        currentPlayer = random.nextInt(players.size());
+        Player player = players.get(currentPlayer);
         textViewCurrentPlayer.setText(player.getName() + "s tur!");
         Log.d("updateCurrentPlayer", "Updated current player to " + player.getName());
     }

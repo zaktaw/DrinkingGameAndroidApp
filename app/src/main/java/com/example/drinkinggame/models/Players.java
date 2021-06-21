@@ -6,14 +6,14 @@ public class Players {
     static ArrayList<Player> players;
 
     public Players() {
-        this.players = new ArrayList();
+        this.players = new ArrayList<Player>();
     }
 
     public static void addPlayer(Player player) {
         players.add(player);
     }
 
-    public static ArrayList getPlayers() {
+    public static ArrayList<Player> getPlayers() {
         return players;
     }
 
