@@ -68,7 +68,7 @@ public class ShopPhase extends AppCompatActivity {
 
         // check if player has enough coins to purchase the object
         if (objectToPurchase.getPrice() > currentPlayer.getCoins()) {
-            Toast.makeText(this, R.string.error_insufficient_funds, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.error_insufficient_funds, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -76,5 +76,10 @@ public class ShopPhase extends AppCompatActivity {
         v.setEnabled(false);
         currentPlayer.setCoins(currentPlayer.getCoins() - objectToPurchase.getPrice());
         shopPhaseCurrentPlayer.setText(currentPlayer.getName() + " (coins: " + currentPlayer.getCoins() + ")");
+    }
+
+    public void goToGamePhase(View v) {
+        Intent intent = new Intent(this, PlayerSelectionPhase.class);
+        startActivity(intent);
     }
 }
