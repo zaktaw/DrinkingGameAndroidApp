@@ -5,40 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_200"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btnGoToAddPlayers"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:onClick="goToAddPlayers"
-        android:text="@string/btn_add_players"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    android:onClick="goToShopPhase"
+    tools:context=".RoundStart">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewCurrentPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/game_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
 
-    <Button
-        android:id="@+id/btnSettings"
-        android:layout_width="379dp"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/settings"
+        android:layout_marginBottom="16dp"
+        android:text="@string/round_start_instruction"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoToAddPlayers" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentPlayer"
+        app:layout_constraintVertical_bias="0.242" />
 </androidx.constraintlayout.widget.ConstraintLayout>
