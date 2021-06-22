@@ -30,5 +30,5 @@
     <!-- gameCards -->
     <string name="game_card_1_title">Kategorilek</string>
     <string name="game_card_1_page1">Kategorien er drinker. * starter.</string>
-    <string name="game_card_1_page2">Taperen drikker tre slurker og mister 100 coins. Resten av spillerne får 100 coins.</string>
+    <string name="game_card_1_page2">Taperen drikker tre slurker.</string>
 </resources>

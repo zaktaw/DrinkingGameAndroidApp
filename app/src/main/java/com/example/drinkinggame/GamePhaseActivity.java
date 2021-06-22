@@ -7,14 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.drinkinggame.models.Player;
+import com.example.drinkinggame.models.Players;
 import com.example.drinkinggame.models.gameCards.GameCard;
 import com.example.drinkinggame.models.gameCards.GameCards;
+
+import java.util.ArrayList;
 
 public class GamePhaseActivity extends AppCompatActivity {
 
     TextView textViewGameCard;
 
-    int pageConter = 0;
+    int pageCounter = 0;
     GameCard currentGameCard;
 
     @Override
@@ -24,21 +28,31 @@ public class GamePhaseActivity extends AppCompatActivity {
 
         textViewGameCard = findViewById(R.id.textViewGameCard);
 
-        //  get a random game card and display its first page
         currentGameCard = GameCards.getRandomGameCard();
-        textViewGameCard.setText(currentGameCard.getPages().get(pageConter));
+
+        // replaces all occurrences of "*" in the first game card with the names of the involved players
+        ArrayList<Player> involvedPlayers = Players.getRandomPlayers(currentGameCard.getPlayersInvolved());
+        String gameCardFirstPage = currentGameCard.getPages().get(0);
+
+        int playerCounter = 0;
+        while (gameCardFirstPage.contains("*")) {
+            gameCardFirstPage = gameCardFirstPage.replaceFirst("\\*", involvedPlayers.get(playerCounter).getName());
+            playerCounter++;
+        }
+
+        textViewGameCard.setText(gameCardFirstPage);
     }
 
     public void nextPage(View v) {
-        pageConter++;
+        pageCounter++;
 
         // go to next game card if there aren't any more pages left in current game card
-        if (pageConter == currentGameCard.getPages().size()) {
+        if (pageCounter == currentGameCard.getPages().size()) {
             Intent intent = new Intent(this, GamePhaseActivity.class);
             startActivity(intent);
         }
         else {
-            textViewGameCard.setText(currentGameCard.getPages().get(pageConter));
+            textViewGameCard.setText(currentGameCard.getPages().get(pageCounter));
         }
     }
 }

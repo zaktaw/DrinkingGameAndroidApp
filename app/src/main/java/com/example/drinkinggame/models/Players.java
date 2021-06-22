@@ -2,7 +2,9 @@ package com.example.drinkinggame.models;
 
 import android.util.Log;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class Players {
@@ -24,6 +26,18 @@ public class Players {
     public static Player getRandomPlayer() {
         int randNum = random.nextInt(players.size());
         return players.get(randNum);
+    }
+
+    public static ArrayList<Player> getRandomPlayers(int n) {
+
+        ArrayList<Player> randomPlayers = new ArrayList<Player>();
+        Collections.shuffle(players);
+
+        for (int i=0; i<n; i++) {
+            randomPlayers.add(players.get(i));
+        }
+
+        return randomPlayers;
     }
 
     public static String playersToString() {
