@@ -36,8 +36,8 @@ public class GamePhaseActivity extends AppCompatActivity {
         String gameCardFirstPage = currentGameCard.getPages().get(0);
 
         int playerCounter = 0;
-        while (gameCardFirstPage.contains("*")) {
-            gameCardFirstPage = gameCardFirstPage.replaceFirst("\\*", involvedPlayers.get(playerCounter).getName());
+        while (gameCardFirstPage.contains("[PLAYER]")) {
+            gameCardFirstPage = gameCardFirstPage.replaceFirst("\\[PLAYER]", involvedPlayers.get(playerCounter).getName());
             playerCounter++;
         }
 

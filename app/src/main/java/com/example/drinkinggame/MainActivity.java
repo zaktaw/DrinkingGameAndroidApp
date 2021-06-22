@@ -49,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 new ArrayList<String>(Arrays.asList(getString(R.string.game_card_1_page1), getString(R.string.game_card_1_page2))),
                 1
         ));
+
+        gameCards.addGameCard(new CategoryGame(
+                getString(R.string.game_card_2_title),
+                new ArrayList<String>(Arrays.asList(getString(R.string.game_card_2_page1), getString(R.string.game_card_2_page2))),
+                3
+        ));
     }
 
     public void goToAddPlayers(View v) {

@@ -29,6 +29,10 @@
 
     <!-- gameCards -->
     <string name="game_card_1_title">Kategorilek</string>
-    <string name="game_card_1_page1">Kategorien er drinker. * starter.</string>
+    <string name="game_card_1_page1">Kategorien er drinker. [PLAYER] starter.</string>
     <string name="game_card_1_page2">Taperen drikker tre slurker.</string>
+
+    <string name="game_card_2_title">Veddemål</string>
+    <string name="game_card_2_page1">[PLAYER] og [PLAYER] tar håndbak mot hverandre. [PLAYER] vedder om hvem som vinner.</string>
+    <string name="game_card_2_page2">Taperen av håndbaken drikker 3 slurker. Hvis personen som veddet gjettet riktig kan h*n dele ut 3 slurker, hvis h*n gjettet feil drikker h*n 6 slurker.</string>
 </resources>
