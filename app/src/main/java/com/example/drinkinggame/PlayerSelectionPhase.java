@@ -11,14 +11,10 @@ import android.widget.TextView;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 public class PlayerSelectionPhase extends AppCompatActivity {
 
     TextView textViewCurrentPlayer;
-    Random random = new Random();
-    int currentPlayer;
+    String currentPlayerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +27,15 @@ public class PlayerSelectionPhase extends AppCompatActivity {
 
     public void goToShopPhase(View v) {
         Intent intent = new Intent(this, ShopPhase.class);
-        intent.putExtra("currentPlayer", currentPlayer);
+        intent.putExtra("currentPlayer", currentPlayerName);
         startActivity(intent);
     }
 
     // choose a random player and update text view that shows who the current player is
     void updateCurrentPlayer() {
         Player player = Players.getRandomPlayer();
-        textViewCurrentPlayer.setText(player.getName() + "s tur!");
-        Log.d("updateCurrentPlayer", "Updated current player to " + player.getName());
+        currentPlayerName = player.getName();
+        textViewCurrentPlayer.setText(currentPlayerName + "s tur!");
+        Log.d("updateCurrentPlayer", "Updated current player to " + currentPlayerName);
     }
 }

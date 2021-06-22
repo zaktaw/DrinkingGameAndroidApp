@@ -40,6 +40,15 @@ public class Players {
         return randomPlayers;
     }
 
+    public static Player getPlayerByName(String name) {
+        for (Player player : players) {
+            if (player.getName().equals(name)) {
+                return player;
+            }
+        }
+        return null;
+    }
+
     public static String playersToString() {
 
         String playersString = "";

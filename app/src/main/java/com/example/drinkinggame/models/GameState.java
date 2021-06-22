@@ -1,15 +1,15 @@
 package com.example.drinkinggame.models;
 
 public class GameState {
-    int maximumRounds;
-    int roundsElapsed;
+    static int maximumRounds;
+    static int roundsElapsed;
 
     public GameState(int maximumRounds) {
         this.maximumRounds = maximumRounds;
         this.roundsElapsed = 0;
     }
 
-    public int getMaximumRounds() {
+    public static int getMaximumRounds() {
         return maximumRounds;
     }
 
@@ -17,8 +17,12 @@ public class GameState {
         this.maximumRounds = maximumRounds;
     }
 
-    public int getRoundsElapsed() {
+    public static int getRoundsElapsed() {
         return roundsElapsed;
+    }
+
+    public static void increaseRoundsElapsed() {
+        roundsElapsed++;
     }
 
     public void setRoundsElapsed(int roundsElapsed) {

@@ -28,7 +28,7 @@ public class ShopPhase extends AppCompatActivity {
     ShopObject shopObject1;
     ShopObject shopObject2;
     ShopObject shopObject3;
-    int currentPlayerIndex;
+    String currentPlayerName;
     Player currentPlayer;
 
     @Override
@@ -43,10 +43,10 @@ public class ShopPhase extends AppCompatActivity {
 
         // get current player and update text view for current player
         Intent intent = getIntent();
-        currentPlayerIndex = intent.getIntExtra("currentPlayer", 0);
-        currentPlayer = Players.getPlayers().get(currentPlayerIndex);
-        shopPhaseCurrentPlayer.setText(currentPlayer.getName() + " (coins: " + currentPlayer.getCoins() + ")");
-        Log.d("currentPlayer", "Got current player: " + currentPlayer.getName() + " (coins: " + currentPlayer.getCoins() + ")");
+        currentPlayerName = intent.getStringExtra("currentPlayer");
+        currentPlayer = Players.getPlayerByName(currentPlayerName);
+        shopPhaseCurrentPlayer.setText(currentPlayerName + " (coins: " + currentPlayer.getCoins() + ")");
+        Log.d("currentPlayer", "Got current player: " + currentPlayerName + " (coins: " + currentPlayer.getCoins() + ")");
 
         updateShopObjects();
     }
@@ -75,7 +75,7 @@ public class ShopPhase extends AppCompatActivity {
         // disable button and update player's coins
         v.setEnabled(false);
         currentPlayer.setCoins(currentPlayer.getCoins() - objectToPurchase.getPrice());
-        shopPhaseCurrentPlayer.setText(currentPlayer.getName() + " (coins: " + currentPlayer.getCoins() + ")");
+        shopPhaseCurrentPlayer.setText(currentPlayerName + " (coins: " + currentPlayer.getCoins() + ")");
     }
 
     public void goToGamePhase(View v) {

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
 import com.example.drinkinggame.models.ShopObject;
 import com.example.drinkinggame.models.ShopObjects;
@@ -23,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
     public Players players;
     public ShopObjects shopObjects;
     public GameCards gameCards;
+    public GameState gameState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        gameState = new GameState(3);
 
         players = new Players();
         Log.d("players", "Instansiated players");

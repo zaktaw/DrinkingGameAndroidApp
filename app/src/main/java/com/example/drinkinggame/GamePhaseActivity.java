@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
 import com.example.drinkinggame.models.gameCards.GameCard;
@@ -48,7 +49,16 @@ public class GamePhaseActivity extends AppCompatActivity {
 
         // go to next game card if there aren't any more pages left in current game card
         if (pageCounter == currentGameCard.getPages().size()) {
-            Intent intent = new Intent(this, GamePhaseActivity.class);
+
+            // end game if there aren't more rounds left
+            GameState.increaseRoundsElapsed();
+            Intent intent;
+            if (GameState.getRoundsElapsed() == GameState.getMaximumRounds()) {
+                intent = new Intent(this, MainActivity.class);
+            }
+            else {
+                intent = new Intent(this, PlayerSelectionPhase.class);
+            }
             startActivity(intent);
         }
         else {
