@@ -79,7 +79,7 @@ public class ShopPhase extends AppCompatActivity {
     }
 
     public void goToGamePhase(View v) {
-        Intent intent = new Intent(this, PlayerSelectionPhase.class);
+        Intent intent = new Intent(this, GamePhaseActivity.class);
         startActivity(intent);
     }
 }

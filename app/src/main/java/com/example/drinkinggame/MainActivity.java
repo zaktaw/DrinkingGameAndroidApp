@@ -11,11 +11,18 @@ import android.widget.Button;
 import com.example.drinkinggame.models.Players;
 import com.example.drinkinggame.models.ShopObject;
 import com.example.drinkinggame.models.ShopObjects;
+import com.example.drinkinggame.models.gameCards.CategoryGame;
+import com.example.drinkinggame.models.gameCards.GameCard;
+import com.example.drinkinggame.models.gameCards.GameCards;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
     public Players players;
     public ShopObjects shopObjects;
+    public GameCards gameCards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_3), 400));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_4), 500));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_5), 600));
+
+        gameCards = new GameCards();
+        gameCards.addGameCard(new CategoryGame(
+                getString(R.string.game_card_1_title),
+                new ArrayList<String>(Arrays.asList(getString(R.string.game_card_1_page1), getString(R.string.game_card_1_page2))),
+                1
+        ));
     }
 
     public void goToAddPlayers(View v) {

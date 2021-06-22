@@ -1,8 +1,12 @@
 package com.example.drinkinggame.models;
 
+import android.util.Log;
+
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Players {
+    static Random random = new Random();
     static ArrayList<Player> players;
 
     public Players() {
@@ -15,6 +19,11 @@ public class Players {
 
     public static ArrayList<Player> getPlayers() {
         return players;
+    }
+
+    public static Player getRandomPlayer() {
+        int randNum = random.nextInt(players.size());
+        return players.get(randNum);
     }
 
     public static String playersToString() {

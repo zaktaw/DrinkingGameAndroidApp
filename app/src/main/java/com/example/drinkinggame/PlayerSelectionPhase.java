@@ -37,9 +37,7 @@ public class PlayerSelectionPhase extends AppCompatActivity {
 
     // choose a random player and update text view that shows who the current player is
     void updateCurrentPlayer() {
-        ArrayList<Player> players = Players.getPlayers();
-        currentPlayer = random.nextInt(players.size());
-        Player player = players.get(currentPlayer);
+        Player player = Players.getRandomPlayer();
         textViewCurrentPlayer.setText(player.getName() + "s tur!");
         Log.d("updateCurrentPlayer", "Updated current player to " + player.getName());
     }

@@ -26,4 +26,9 @@
     <string name="shop_object_3">Del ut 15 slurker</string>
     <string name="shop_object_4">Del ut 20 slurker</string>
     <string name="shop_object_5">Del ut 25 slurker</string>
+
+    <!-- gameCards -->
+    <string name="game_card_1_title">Kategorilek</string>
+    <string name="game_card_1_page1">Kategorien er drinker. * starter.</string>
+    <string name="game_card_1_page2">Taperen drikker tre slurker og mister 100 coins. Resten av spillerne får 100 coins.</string>
 </resources>
