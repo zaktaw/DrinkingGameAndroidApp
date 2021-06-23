@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -30,6 +31,7 @@ public class GamePhaseActivity extends AppCompatActivity {
         textViewGameCard = findViewById(R.id.textViewGameCard);
 
         currentGameCard = GameCards.getRandomGameCard();
+        Log.d("classTest", String.valueOf(currentGameCard.getClass()));
 
         // replaces all occurrences of "*" in the first game card with the names of the involved players
         ArrayList<Player> involvedPlayers = Players.getRandomPlayers(currentGameCard.getPlayersInvolved());
@@ -51,6 +53,7 @@ public class GamePhaseActivity extends AppCompatActivity {
         if (pageCounter == currentGameCard.getPages().size()) {
 
             // end game if there aren't more rounds left
+            /**
             GameState.increaseRoundsElapsed();
             Intent intent;
             if (GameState.getRoundsElapsed() == GameState.getMaximumRounds()) {
@@ -60,6 +63,8 @@ public class GamePhaseActivity extends AppCompatActivity {
                 intent = new Intent(this, PlayerSelectionPhase.class);
             }
             startActivity(intent);
+             **/
+
         }
         else {
             textViewGameCard.setText(currentGameCard.getPages().get(pageCounter));

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
 import com.example.drinkinggame.models.ShopObject;
@@ -79,7 +80,22 @@ public class ShopPhase extends AppCompatActivity {
     }
 
     public void goToGamePhase(View v) {
-        Intent intent = new Intent(this, GamePhaseActivity.class);
+
+        String gameCard = GameState.getNextGameCard();
+        Intent intent;
+
+        // determine which game activity to go to based on which game card that was drawn
+        switch (gameCard) {
+            case "GameWhisperChallenge" :
+                intent = new Intent(this, GameWhisperChallenge.class);
+                break;
+            case "GamePointingGame" :
+                intent = new Intent(this, GamePointingGame.class);
+                break;
+            default :
+                intent = new Intent(this, MainActivity.class);
+        }
+
         startActivity(intent);
     }
 }

@@ -1,31 +1,34 @@
 package com.example.drinkinggame.models;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class GameState {
-    static int maximumRounds;
-    static int roundsElapsed;
+    private static int gameCardCounter;
+    static ArrayList<String> gameCards;
 
-    public GameState(int maximumRounds) {
-        this.maximumRounds = maximumRounds;
-        this.roundsElapsed = 0;
+    public GameState() {
+        this.gameCardCounter = 0;
+        this.gameCards = new ArrayList<>();
     }
 
-    public static int getMaximumRounds() {
-        return maximumRounds;
+    public void addGameCard(String gameCard) {
+        gameCards.add(gameCard);
     }
 
-    public void setMaximumRounds(int maximumRounds) {
-        this.maximumRounds = maximumRounds;
+    public static void shuffleGameCards() {
+        Collections.shuffle(gameCards);
     }
 
-    public static int getRoundsElapsed() {
-        return roundsElapsed;
+    public static String getNextGameCard() {
+        String gameCard = gameCards.get(gameCardCounter);
+        gameCardCounter++;
+        return gameCard;
     }
 
-    public static void increaseRoundsElapsed() {
-        roundsElapsed++;
-    }
-
-    public void setRoundsElapsed(int roundsElapsed) {
-        this.roundsElapsed = roundsElapsed;
+    // game is over when there aren't more cards left. This is handled in each game activity.
+    public static boolean isGameOver() {
+        if (gameCardCounter == gameCards.size()) return true;
+        else return false;
     }
 }

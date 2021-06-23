@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrinkingGame">
-        <activity android:name=".GamePhaseActivity"></activity>
+        <activity android:name=".GamePointingGame"></activity>
+        <activity android:name=".gamePhaseActivites.MainActivity" />
+        <activity android:name=".GameWhisperChallenge" />
+        <activity android:name=".GamePhaseActivity" />
         <activity android:name=".ShopPhase" />
         <activity android:name=".PlayerSelectionPhase" />
         <activity android:name=".AddPlayers" />
