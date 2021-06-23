@@ -1,38 +1,36 @@
 <resources>
     <string name="app_name">Yet Another Piccolo App!</string>
 
-    <!-- MainActivity -->
+    <!-- main_activity -->
     <string name="btn_add_players">Legg til spillere</string>
     <string name="game_title">Yet Another Piccolo App!</string>
     <string name="settings">Instillinger</string>
 
-    <!-- AddPlayers -->
+    <!-- add_players -->
     <string name="title_add_players">Legg til spillere</string>
     <string name="button_add_player">Legg til</string>
     <string name="text_view_players">Spillere:</string>
     <string name="btn_start_game">Start spill</string>
 
-    <!-- PlayerSelectionPhase -->
+    <!-- player_selection_phase -->
     <string name="player_selection_instructions">Trykk på skjermen for å gå videre</string>
 
-    <!-- ShopPhase -->
+    <!-- shop_phase -->
     <string name="title_shop_phase">Kjøp-fase</string>
     <string name="button_proceed">Ferdig</string>
     <string name="error_insufficient_funds">Du har ikke nok coins til å kjøpe dette objektet</string>
 
-    <!-- shopObjects -->
+    <!-- shop_objects -->
     <string name="shop_object_1">Del ut 5 slurker</string>
     <string name="shop_object_2">Del ut 10 slurker</string>
     <string name="shop_object_3">Del ut 15 slurker</string>
     <string name="shop_object_4">Del ut 20 slurker</string>
     <string name="shop_object_5">Del ut 25 slurker</string>
 
-    <!-- gameCards -->
-    <string name="game_card_1_title">Kategorilek</string>
-    <string name="game_card_1_page1">Kategorien er drinker. [PLAYER] starter.</string>
-    <string name="game_card_1_page2">Taperen drikker tre slurker.</string>
+    <!-- GAME_CARDS -->
 
-    <string name="game_card_2_title">Veddemål</string>
-    <string name="game_card_2_page1">[PLAYER] og [PLAYER] tar håndbak mot hverandre. [PLAYER] vedder om hvem som vinner.</string>
-    <string name="game_card_2_page2">Taperen av håndbaken drikker 3 slurker. Hvis personen som veddet gjettet riktig kan h*n dele ut 3 slurker, hvis h*n gjettet feil drikker h*n 6 slurker.</string>
+    <!-- pointing_game -->
+    <string name="title_pointing_game">Pekeleken</string>
+    <string name="page1_pointing_game">Pek på spilleren som [ALTERNATIVE]. Trykk på skjermen når dette er gjort.</string>
+    <string name="negative_button_pointing_game">Ingen</string>
 </resources>

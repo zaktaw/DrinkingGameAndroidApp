@@ -15,6 +15,7 @@ import com.example.drinkinggame.models.ShopObjects;
 import com.example.drinkinggame.models.gameCards.CategoryGame;
 import com.example.drinkinggame.models.gameCards.GameCard;
 import com.example.drinkinggame.models.gameCards.GameCards;
+import com.example.drinkinggame.models.gameCards.PointingGameAlternatives;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     public Players players;
     public ShopObjects shopObjects;
-    public GameCards gameCards;
     public GameState gameState;
+    public PointingGameAlternatives pointingGameAlternatives;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gameState = new GameState();
+        pointingGameAlternatives = new PointingGameAlternatives();
 
         players = new Players();
         Log.d("players", "Instansiated players");
@@ -44,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_5), 600));
 
         gameState.addGameCard("GameWhisperChallenge");
+        gameState.addGameCard("GamePointingGame");
+        gameState.addGameCard("GamePointingGame");
+        gameState.addGameCard("GamePointingGame");
+        gameState.addGameCard("GamePointingGame");
         gameState.addGameCard("GamePointingGame");
         GameState.shuffleGameCards();
     }

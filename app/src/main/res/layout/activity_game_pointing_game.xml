@@ -4,16 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="nextCard"
+    android:background="@color/teal_200"
+    android:onClick="showDialog"
     tools:context=".GamePointingGame">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/titlePointingGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pointing game"
+        android:gravity="center"
+        android:text="@string/title_pointing_game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/textViewPointnigGame"
+        android:layout_width="305dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="136dp"
+        android:gravity="center"
+        android:text="@string/page1_pointing_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePointingGame" />
 </androidx.constraintlayout.widget.ConstraintLayout>
