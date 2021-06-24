@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
 
@@ -33,7 +34,7 @@ public class PlayerSelectionPhase extends AppCompatActivity {
 
     // choose a random player and update text view that shows who the current player is
     void updateCurrentPlayer() {
-        Player player = Players.getRandomPlayer();
+        Player player = Players.getNextPlayer();
         currentPlayerName = player.getName();
         textViewCurrentPlayer.setText(currentPlayerName + "s tur!");
         Log.d("updateCurrentPlayer", "Updated current player to " + currentPlayerName);

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.drinkinggame.gameActivities.GamePhase;
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGame;
 import com.example.drinkinggame.gameActivities.pointingGame.PointingGame;
 import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
@@ -85,10 +86,11 @@ public class ShopPhase extends AppCompatActivity {
 
     public void goToGamePhase(View v) {
 
-        String gameCard = GameState.getNextGameCard();
-        Intent intent;
+        //String gameCard = GameState.getNextGameCard();
+        Intent intent = new Intent(this, GamePhase.chooseGame());
 
         // determine which game activity to go to based on which game card that was drawn
+        /*
         switch (gameCard) {
             case "WhisperChallenge" :
                 intent = new Intent(this, WhisperChallenge.class);
@@ -105,6 +107,8 @@ public class ShopPhase extends AppCompatActivity {
             default :
                 intent = new Intent(this, MainActivity.class);
         }
+
+         */
 
         startActivity(intent);
     }

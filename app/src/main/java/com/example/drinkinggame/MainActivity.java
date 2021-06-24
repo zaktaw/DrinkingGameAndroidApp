@@ -41,9 +41,12 @@ public class MainActivity extends AppCompatActivity {
         shopObjects = new ShopObjects();
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_1), 200));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_2), 300));
-        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_3), 400));
-        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_4), 500));
-        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_5), 600));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_3), 500));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_4), 700));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_5), 1000));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_6), 300));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_7), 300));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_8), 800));
 
         gameState.addGameCard("WhisperChallenge");
         gameState.addGameCard("PointingGame");

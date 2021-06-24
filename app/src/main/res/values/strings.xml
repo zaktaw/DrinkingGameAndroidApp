@@ -18,14 +18,17 @@
     <!-- shop_phase -->
     <string name="title_shop_phase">Kjøp-fase</string>
     <string name="button_proceed">Ferdig</string>
-    <string name="error_insufficient_funds">Du har ikke nok coins til å kjøpe dette objektet</string>
+    <string name="error_insufficient_funds">Du har ikke nok coins til å kjøpe dette produktet</string>
 
     <!-- shop_objects -->
     <string name="shop_object_1">Del ut 5 slurker</string>
     <string name="shop_object_2">Del ut 10 slurker</string>
-    <string name="shop_object_3">Del ut 15 slurker</string>
-    <string name="shop_object_4">Del ut 20 slurker</string>
-    <string name="shop_object_5">Del ut 25 slurker</string>
+    <string name="shop_object_3">Del ut 1 shot</string>
+    <string name="shop_object_4">Del ut 2 shots</string>
+    <string name="shop_object_5">Bytt plass med en spiller</string>
+    <string name="shop_object_6">Velg en spiller: spilleren må sitte på golvet en hel runde</string>
+    <string name="shop_object_7">Velg en spiller: spilleren kan ikke snakke på en hel runde</string>
+    <string name="shop_object_8">Finn på en regel som gjelder ut resten av spillet</string>
 
     <!-- GAME_CARDS -->
 

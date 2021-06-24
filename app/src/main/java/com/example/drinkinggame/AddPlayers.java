@@ -8,8 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.drinkinggame.gameActivities.GamePhase;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
+
+import java.util.Collections;
 
 public class AddPlayers extends AppCompatActivity {
 
@@ -25,7 +28,6 @@ public class AddPlayers extends AppCompatActivity {
         inputPlayer = findViewById(R.id.inputPlayer);
 
         textViewplayers.setText(Players.playersToString());
-        Log.d("players", "Updated players text view");
     }
 
     // add player to players array and update the text view showing all players
@@ -38,7 +40,8 @@ public class AddPlayers extends AppCompatActivity {
     }
 
     public void startGame(View v) {
-        Intent intent = new Intent(this, PlayerSelectionPhase.class);
+        Players.shufflePlayers();
+        Intent intent = GamePhase.goToNextGame(this);
         startActivity(intent);
     }
 }

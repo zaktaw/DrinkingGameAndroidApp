@@ -10,9 +10,11 @@ import java.util.Random;
 public class Players {
     static Random random = new Random();
     static ArrayList<Player> players;
+    static int playerTurnCounter;
 
     public Players() {
         this.players = new ArrayList<Player>();
+        this.playerTurnCounter = 0;
     }
 
     public static void addPlayer(Player player) {
@@ -22,6 +24,8 @@ public class Players {
     public static ArrayList<Player> getPlayers() {
         return players;
     }
+
+    public static int getPlayersSize() {return players.size();}
 
     public static Player getRandomPlayer() {
         int randNum = random.nextInt(players.size());
@@ -40,6 +44,10 @@ public class Players {
         return randomPlayers;
     }
 
+    public static void shufflePlayers() {
+        Collections.shuffle(players);
+    }
+
     public static Player getPlayerByName(String name) {
         for (Player player : players) {
             if (player.getName().equals(name)) {
@@ -47,6 +55,16 @@ public class Players {
             }
         }
         return null;
+    }
+
+    public static Player getNextPlayer() {
+        Player player = players.get(playerTurnCounter);
+        playerTurnCounter++;
+        if (playerTurnCounter == players.size()) {
+            Collections.shuffle(players);
+            playerTurnCounter = 0;
+        }
+        return player;
     }
 
     public static String playersToString() {
