@@ -63,9 +63,9 @@ public class Players {
         return playersString;
     }
 
-    public static void increaseCoinsAllPlayers(int ammount) {
+    public static void increaseCoinsAllPlayers(int amount) {
         for (Player player : players) {
-            player.setCoins(player.getCoins() + ammount);
+            player.giveCoins(amount);
         }
     }
 }

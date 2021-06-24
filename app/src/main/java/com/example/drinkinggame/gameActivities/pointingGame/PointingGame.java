@@ -27,7 +27,7 @@ public class PointingGame extends AppCompatActivity {
         String cardText = (String) textViewPointnigGame.getText();
         String alternative = PointingGameAlternatives.getNextAlternative();
 
-        cardText = cardText.replaceFirst("\\[ALTERNATIVE]", alternative);
+        cardText = cardText.replaceAll("\\[ALTERNATIVE]", alternative);
         textViewPointnigGame.setText(cardText);
     }
 

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.R;
+import com.example.drinkinggame.gameActivities.GamePhase;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
 
@@ -36,14 +37,8 @@ public class WhisperChallengeDialog extends AppCompatDialogFragment {
         btnWhisperChallengeChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Players.increaseCoinsAllPlayers(100);
-
-                Intent intent;
-
-                if (GameState.isGameOver()) intent = new Intent(getContext(), MainActivity.class);
-                else intent = new Intent(getContext(), PlayerSelectionPhase.class);
-
+                Intent intent = GamePhase.goToNextGame(getContext());
                 startActivity(intent);
             }
         });
@@ -52,14 +47,8 @@ public class WhisperChallengeDialog extends AppCompatDialogFragment {
         btnWhisperChallengeChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Players.increaseCoinsAllPlayers(-100);
-
-                Intent intent;
-
-                if (GameState.isGameOver()) intent = new Intent(getContext(), MainActivity.class);
-                else intent = new Intent(getContext(), PlayerSelectionPhase.class);
-
+                Intent intent = GamePhase.goToNextGame(getContext());
                 startActivity(intent);
             }
         });

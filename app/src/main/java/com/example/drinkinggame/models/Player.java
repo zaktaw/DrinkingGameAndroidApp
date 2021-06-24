@@ -24,4 +24,9 @@ public class Player {
     public void setCoins(int coins) {
         this.coins = coins;
     }
+
+    public void giveCoins(int coins) {
+        this.coins += coins;
+        if (this.coins < 0) this.coins = 0; // a player's coins can't go below 0
+    }
 }

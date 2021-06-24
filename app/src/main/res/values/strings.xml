@@ -32,7 +32,7 @@
     <!-- pointing_game -->
     <string name="title_pointing_game">Pekeleken</string>
     <string name="page1_pointing_game">Pek på spilleren som [ALTERNATIVE]. Trykk på skjermen når dette er gjort.</string>
-    <string name="pointing_game_dialog_description">Velg spilleren som flest pekte på. Denne spilleren får 100 coins og kan dele ut 3 slurker. Hvis gruppen ikke ble enig om én enkelt spiller, velg "ingen".</string>
+    <string name="pointing_game_dialog_description">Velg spilleren som flest pekte på. Denne spilleren får 300 coins og kan dele ut 3 slurker. Hvis gruppen ikke ble enig om én enkelt spiller, velg "ingen".</string>
     <string name="pointing_game_dialog_button">Ingen</string>
 
     <!-- whisper_challenge -->

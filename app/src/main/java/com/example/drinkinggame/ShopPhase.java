@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGame;
 import com.example.drinkinggame.gameActivities.pointingGame.PointingGame;
+import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
 import com.example.drinkinggame.gameActivities.whisperChallenge.WhisperChallenge;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Player;
@@ -97,6 +98,9 @@ public class ShopPhase extends AppCompatActivity {
                 break;
             case "CategoryGame" :
                 intent = new Intent(this, CategoryGame.class);
+                break;
+            case "StaticGame" :
+                intent = new Intent(this, StaticGameActivity.class);
                 break;
             default :
                 intent = new Intent(this, MainActivity.class);

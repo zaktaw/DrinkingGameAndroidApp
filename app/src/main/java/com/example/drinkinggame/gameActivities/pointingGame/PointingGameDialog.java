@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.R;
+import com.example.drinkinggame.gameActivities.GamePhase;
 import com.example.drinkinggame.gameActivities.RecyclerViewAdapterSelectPlayer;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
@@ -35,7 +36,7 @@ public class PointingGameDialog extends AppCompatDialogFragment {
 
         recyclerViewPointingGame = view.findViewById(R.id.recyclerViewCategoryGame);
 
-        RecyclerViewAdapterSelectPlayer recyclerViewAdapterSelectPlayer = new RecyclerViewAdapterSelectPlayer(this.getContext(), Players.getPlayers(), 500);
+        RecyclerViewAdapterSelectPlayer recyclerViewAdapterSelectPlayer = new RecyclerViewAdapterSelectPlayer(this.getContext(), Players.getPlayers(), 300);
         recyclerViewPointingGame.setAdapter(recyclerViewAdapterSelectPlayer);
         recyclerViewPointingGame.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
@@ -43,11 +44,7 @@ public class PointingGameDialog extends AppCompatDialogFragment {
         btnPointingGameDialogNobody.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent;
-
-                if (GameState.isGameOver()) intent = new Intent(getContext(), MainActivity.class);
-                else intent = new Intent(getContext(), PlayerSelectionPhase.class);
-
+                Intent intent = GamePhase.goToNextGame(getContext());
                 startActivity(intent);
             }
         });

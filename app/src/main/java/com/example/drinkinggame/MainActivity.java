@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGameCategories;
+import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
+import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGames;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
 import com.example.drinkinggame.models.ShopObject;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public GameState gameState;
     public PointingGameAlternatives pointingGameAlternatives;
     public CategoryGameCategories categoryGameCategories;
+    public StaticGames staticGames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         gameState = new GameState();
         pointingGameAlternatives = new PointingGameAlternatives();
         categoryGameCategories = new CategoryGameCategories();
+        staticGames = new StaticGames();
 
         players = new Players();
         Log.d("players", "Instansiated players");
@@ -45,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
         gameState.addGameCard("PointingGame");
         gameState.addGameCard("CategoryGame");
         gameState.addGameCard("CategoryGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
         GameState.shuffleGameCards();
     }
 
