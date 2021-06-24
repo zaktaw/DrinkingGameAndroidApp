@@ -5,26 +5,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.R;
+import com.example.drinkinggame.gameActivities.pointingGame.PointingGameDialog;
 import com.example.drinkinggame.models.GameState;
+import com.example.drinkinggame.models.Players;
+import com.example.drinkinggame.models.gameCards.PointingGameAlternatives;
 
 public class WhisperChallenge extends AppCompatActivity {
+
+    private TextView textViewWhisperChallengeDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_whisper_challenge);
+
+        textViewWhisperChallengeDescription = findViewById(R.id.textViewWhisperChallengeDescription);
+        setCardText();
     }
 
-    public void nextCard(View v) {
-        Intent intent;
+    public void showDialog(View v) {
+        WhisperChallengeDialog whisperChallengeDialog = new WhisperChallengeDialog();
+        whisperChallengeDialog.show(getSupportFragmentManager(), "whisper challenge dialog");
+    }
 
-        if (GameState.isGameOver()) intent = new Intent(this, MainActivity.class);
-        else intent = new Intent(this, PlayerSelectionPhase.class);
+    public void setCardText() {
+        String cardText = (String) textViewWhisperChallengeDescription.getText();
+        String player = Players.getRandomPlayer().getName();
 
-        startActivity(intent);
+        cardText = cardText.replaceAll("\\[PLAYER]", player);
+        textViewWhisperChallengeDescription.setText(cardText);
     }
 }

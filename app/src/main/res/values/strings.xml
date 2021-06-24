@@ -34,4 +34,11 @@
     <string name="page1_pointing_game">Pek på spilleren som [ALTERNATIVE]. Trykk på skjermen når dette er gjort.</string>
     <string name="pointing_game_dialog_description">Velg spilleren som flest pekte på. Denne spilleren får 100 coins og kan dele ut 3 slurker. Hvis gruppen ikke ble enig om én enkelt spiller, velg "ingen".</string>
     <string name="pointing_game_dialog_button">Ingen</string>
+
+    <!-- whisper_challenge -->
+    <string name="whisper_challenge_title">Hviskeleken</string>
+    <string name="whisper_challenge_description">[PLAYER] finner på et ord og hvisker det til personen til høyre for seg. Dette gjentas til ordet har gått helt rundt til [PLAYER]. Trykk på skjermen når dette er gjort.</string>
+    <string name="whisper_challenge_dialog_description">Hvis ordet gikk hele runden rundt uten å forandres: gruppen tar en felles-skål og mottar 100 coins hver. Hvis ikke mister alle 100 coins. Gikk ordet rundt uten å forandres?</string>
+    <string name="whisper_challenge_dialog_choice1">Ja</string>
+    <string name="whisper_challenge_dialog_choice2">Nei</string>
 </resources>
