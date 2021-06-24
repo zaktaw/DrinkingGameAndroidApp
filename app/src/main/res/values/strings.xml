@@ -20,6 +20,9 @@
     <string name="button_proceed">Ferdig</string>
     <string name="error_insufficient_funds">Du har ikke nok coins til å kjøpe dette produktet</string>
 
+    <!-- game_over_phase -->
+    <string name="game_over_text">Spillet er nå over. Trykk på skjermen for å fortsette til menyen.</string>
+
     <!-- shop_objects -->
     <string name="shop_object_1">Del ut 5 slurker</string>
     <string name="shop_object_2">Del ut 10 slurker</string>

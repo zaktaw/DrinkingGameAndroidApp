@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import com.example.drinkinggame.GameOverPhase;
 import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGame;
@@ -22,7 +23,7 @@ public class GamePhase {
         Intent intent;
         random = new Random();
 
-        if (GameState.isGameOver()) intent = new Intent(context, MainActivity.class);
+        if (GameState.isGameOver()) intent = new Intent(context, GameOverPhase.class);
         else {
             // 1/4 chance to go to shop phase
             if (random.nextInt(4) == 0) {
