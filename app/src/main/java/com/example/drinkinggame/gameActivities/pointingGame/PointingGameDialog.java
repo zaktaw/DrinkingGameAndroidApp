@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.R;
+import com.example.drinkinggame.gameActivities.RecyclerViewAdapterSelectPlayer;
 import com.example.drinkinggame.models.Players;
 
 public class PointingGameDialog extends AppCompatDialogFragment {
@@ -31,8 +32,9 @@ public class PointingGameDialog extends AppCompatDialogFragment {
         builder.setView(view);
 
         recyclerViewPointingGame = view.findViewById(R.id.recyclerViewPointingGame);
-        PointingGameRecyclerViewAdapter pointingGameRecyclerViewAdapter = new PointingGameRecyclerViewAdapter(this.getContext(), Players.getPlayers());
-        recyclerViewPointingGame.setAdapter(pointingGameRecyclerViewAdapter);
+
+        RecyclerViewAdapterSelectPlayer recyclerViewAdapterSelectPlayer = new RecyclerViewAdapterSelectPlayer(this.getContext(), Players.getPlayers(), 500);
+        recyclerViewPointingGame.setAdapter(recyclerViewAdapterSelectPlayer);
         recyclerViewPointingGame.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         btnPointingGameDialogNobody = view.findViewById(R.id.btnPointingGameDialogNobody);

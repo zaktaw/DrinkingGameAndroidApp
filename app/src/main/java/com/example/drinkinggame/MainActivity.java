@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_4), 500));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_5), 600));
 
-        gameState.addGameCard("GameWhisperChallenge");
-        gameState.addGameCard("GameWhisperChallenge");
-        gameState.addGameCard("GameWhisperChallenge");
-        //gameState.addGameCard("GamePointingGame");
+        //gameState.addGameCard("GameWhisperChallenge");
+        gameState.addGameCard("GamePointingGame");
+        gameState.addGameCard("GamePointingGame");
+        gameState.addGameCard("GamePointingGame");
         GameState.shuffleGameCards();
     }
 

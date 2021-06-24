@@ -1,5 +1,4 @@
-package com.example.drinkinggame.gameActivities.pointingGame;
-
+package com.example.drinkinggame.gameActivities;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -20,30 +19,32 @@ import com.example.drinkinggame.models.Players;
 
 import java.util.ArrayList;
 
-public class PointingGameRecyclerViewAdapter extends RecyclerView.Adapter<PointingGameRecyclerViewAdapter.PointingGameRecyclerViewViewHolder> {
+public class RecyclerViewAdapterSelectPlayer extends RecyclerView.Adapter<RecyclerViewAdapterSelectPlayer.SelectPlayerViewHolder> {
 
     ArrayList<Player> players;
     Context context;
+    int ammount; // ammout of coins to give player
 
-    public PointingGameRecyclerViewAdapter(Context context, ArrayList<Player> players) {
+    public RecyclerViewAdapterSelectPlayer(Context context, ArrayList<Player> players, int ammount) {
         this.context = context;
         this.players = players;
+        this.ammount = ammount;
     }
 
     @NonNull
     @Override
-    public PointingGameRecyclerViewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SelectPlayerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.layout_pointing_game_recycler_view_row, parent, false);
-        return new PointingGameRecyclerViewViewHolder(view);
+        View view = inflater.inflate(R.layout.layout_select_player_recycler_view_row, parent, false);
+        return new SelectPlayerViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PointingGameRecyclerViewViewHolder holder, int position) {
-        holder.pointingGameRecyclerViewPlayer.setText(players.get(position).getName());
+    public void onBindViewHolder(@NonNull SelectPlayerViewHolder holder, int position) {
+        holder.textViewPlayer.setText(players.get(position).getName());
 
         // when a player is clicked: increase their coins and go to player selection phase
-        holder.pointingGameRecyclerViewRow.setOnClickListener(new View.OnClickListener() {
+        holder.selectPlayerRecyclerViewRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -53,7 +54,7 @@ public class PointingGameRecyclerViewAdapter extends RecyclerView.Adapter<Pointi
                 else intent = new Intent(context, PlayerSelectionPhase.class);
 
                 Player player = Players.getPlayerByName(players.get(position).getName());
-                player.setCoins(player.getCoins() + 5000);
+                player.setCoins(player.getCoins() + ammount);
 
                 context.startActivity(intent);
             }
@@ -65,15 +66,15 @@ public class PointingGameRecyclerViewAdapter extends RecyclerView.Adapter<Pointi
         return players.size();
     }
 
-    public class PointingGameRecyclerViewViewHolder extends RecyclerView.ViewHolder{
+    public class SelectPlayerViewHolder extends RecyclerView.ViewHolder{
 
-        TextView pointingGameRecyclerViewPlayer;
-        ConstraintLayout pointingGameRecyclerViewRow;
+        TextView textViewPlayer;
+        ConstraintLayout selectPlayerRecyclerViewRow;
 
-        public PointingGameRecyclerViewViewHolder(@NonNull View itemView) {
+        public SelectPlayerViewHolder(@NonNull View itemView) {
             super(itemView);
-            pointingGameRecyclerViewPlayer = itemView.findViewById(R.id.pointingGameRecyclerVeiwPlayer);
-            pointingGameRecyclerViewRow = itemView.findViewById(R.id.pointingGameRecyclerViewRow);
+            textViewPlayer = itemView.findViewById(R.id.textViewPlayer);
+            selectPlayerRecyclerViewRow = itemView.findViewById(R.id.selectPlayerRecyclerViewRow);
         }
     }
 }
