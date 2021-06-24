@@ -41,4 +41,8 @@
     <string name="whisper_challenge_dialog_description">Hvis ordet gikk hele runden rundt uten å forandres: gruppen tar en felles-skål og mottar 100 coins hver. Hvis ikke mister alle 100 coins. Gikk ordet rundt uten å forandres?</string>
     <string name="whisper_challenge_dialog_choice1">Ja</string>
     <string name="whisper_challenge_dialog_choice2">Nei</string>
+
+    <!-- whisper_challenge -->
+    <string name="category_game_title">Kategorispillet</string>
+    <string name="category_game_description">Kategorien er [CATEGORY]. Hver spiller bytter på å si et ord fra kategorien helt til en spiller bruker for lang tid eller ikke kommer på noe mer. [PLAYER] starter. Trykk på skjermen når dere er ferdig.</string>
 </resources>
