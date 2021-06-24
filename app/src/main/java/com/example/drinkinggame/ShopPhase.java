@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.drinkinggame.gameActivities.pointingGame.PointingGame;
+import com.example.drinkinggame.gameActivities.whisperChallenge.WhisperChallenge;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;
@@ -87,10 +89,10 @@ public class ShopPhase extends AppCompatActivity {
         // determine which game activity to go to based on which game card that was drawn
         switch (gameCard) {
             case "GameWhisperChallenge" :
-                intent = new Intent(this, GameWhisperChallenge.class);
+                intent = new Intent(this, WhisperChallenge.class);
                 break;
             case "GamePointingGame" :
-                intent = new Intent(this, GamePointingGame.class);
+                intent = new Intent(this, PointingGame.class);
                 break;
             default :
                 intent = new Intent(this, MainActivity.class);

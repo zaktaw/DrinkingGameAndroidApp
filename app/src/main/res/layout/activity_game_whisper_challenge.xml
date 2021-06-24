@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="nextCard"
-    tools:context=".GameWhisperChallenge">
+    tools:context=".gameActivities.whisperChallenge.WhisperChallenge">
 
     <TextView
         android:id="@+id/textView5"

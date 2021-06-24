@@ -1,4 +1,4 @@
-package com.example.drinkinggame;
+package com.example.drinkinggame.gameActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.drinkinggame.R;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Player;
 import com.example.drinkinggame.models.Players;

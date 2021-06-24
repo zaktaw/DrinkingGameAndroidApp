@@ -1,24 +1,25 @@
-package com.example.drinkinggame;
+package com.example.drinkinggame.gameActivities.pointingGame;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.drinkinggame.models.Player;
+import com.example.drinkinggame.PlayerSelectionPhase;
+import com.example.drinkinggame.R;
 import com.example.drinkinggame.models.Players;
 
-public class GamePointingGameDialog  extends AppCompatDialogFragment {
+public class PointingGameDialog extends AppCompatDialogFragment {
 
-    private Button buttonYes;
     private RecyclerView recyclerViewPointingGame;
+    private Button btnPointingGameDialogNobody;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -27,24 +28,21 @@ public class GamePointingGameDialog  extends AppCompatDialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_pointing_game_dialog, null);
 
-        builder.setView(view)
-                .setTitle("Choose player");
+        builder.setView(view);
 
         recyclerViewPointingGame = view.findViewById(R.id.recyclerViewPointingGame);
-        GamePointingGameRecyclerViewAdapter gamePointingGameRecyclerViewAdapter = new GamePointingGameRecyclerViewAdapter(this.getContext(), Players.getPlayers());
-        recyclerViewPointingGame.setAdapter(gamePointingGameRecyclerViewAdapter);
+        PointingGameRecyclerViewAdapter pointingGameRecyclerViewAdapter = new PointingGameRecyclerViewAdapter(this.getContext(), Players.getPlayers());
+        recyclerViewPointingGame.setAdapter(pointingGameRecyclerViewAdapter);
         recyclerViewPointingGame.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        /*
-        buttonYes = view.findViewById(R.id.buttonYes);
-        buttonYes.setOnClickListener(new View.OnClickListener() {
+
+        btnPointingGameDialogNobody = view.findViewById(R.id.btnPointingGameDialogNobody);
+        btnPointingGameDialogNobody.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Player player = Players.getRandomPlayer();
-                player.setCoins(player.getCoins() + 5000);
+                Intent intent = new Intent(getContext(), PlayerSelectionPhase.class);
+                startActivity(intent);
             }
         });
-
-         */
 
         return builder.create();
     }

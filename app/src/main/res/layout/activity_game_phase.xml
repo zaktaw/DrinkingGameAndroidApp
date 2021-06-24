@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/teal_200"
     android:onClick="nextPage"
-    tools:context=".GamePhaseActivity">
+    tools:context=".gameActivities.GamePhaseActivity">
 
     <TextView
         android:id="@+id/textViewGameCard"

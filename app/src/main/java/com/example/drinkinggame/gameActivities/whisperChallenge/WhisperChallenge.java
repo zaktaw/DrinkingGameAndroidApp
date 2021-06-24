@@ -1,4 +1,4 @@
-package com.example.drinkinggame;
+package com.example.drinkinggame.gameActivities.whisperChallenge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.drinkinggame.MainActivity;
+import com.example.drinkinggame.PlayerSelectionPhase;
+import com.example.drinkinggame.R;
 import com.example.drinkinggame.models.GameState;
 
-public class GameWhisperChallenge extends AppCompatActivity {
+public class WhisperChallenge extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

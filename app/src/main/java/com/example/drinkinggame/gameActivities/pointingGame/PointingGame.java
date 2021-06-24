@@ -1,20 +1,15 @@
-package com.example.drinkinggame;
+package com.example.drinkinggame.gameActivities.pointingGame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.drinkinggame.models.GameState;
-import com.example.drinkinggame.models.Player;
-import com.example.drinkinggame.models.Players;
+import com.example.drinkinggame.R;
 import com.example.drinkinggame.models.gameCards.PointingGameAlternatives;
 
-import java.util.ArrayList;
-
-public class GamePointingGame extends AppCompatActivity {
+public class PointingGame extends AppCompatActivity {
 
     TextView textViewPointnigGame;
 
@@ -38,7 +33,7 @@ public class GamePointingGame extends AppCompatActivity {
     }
 
     public void showDialog(View v) {
-        GamePointingGameDialog gamePointingGameDialog = new GamePointingGameDialog();
-        gamePointingGameDialog.show(getSupportFragmentManager(), "pointing game dialog");
+        PointingGameDialog pointingGameDialog = new PointingGameDialog();
+        pointingGameDialog.show(getSupportFragmentManager(), "pointing game dialog");
     }
 }
