@@ -1,4 +1,4 @@
-package com.example.drinkinggame.gameActivities.pointingGame;
+package com.example.drinkinggame.gameActivities.categoryGame;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -19,28 +19,28 @@ import com.example.drinkinggame.gameActivities.RecyclerViewAdapterSelectPlayer;
 import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
 
-public class PointingGameDialog extends AppCompatDialogFragment {
+public class CategoryGameDialog extends AppCompatDialogFragment {
 
-    private RecyclerView recyclerViewPointingGame;
-    private Button btnPointingGameDialogNobody;
+    private RecyclerView recyclerViewCategoryGame;
+    private Button btnCategoryGameDialogNobody;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.layout_pointing_game_dialog, null);
+        View view = inflater.inflate(R.layout.layout_category_game_dialog, null);
 
         builder.setView(view);
 
-        recyclerViewPointingGame = view.findViewById(R.id.recyclerViewCategoryGame);
+        recyclerViewCategoryGame = view.findViewById(R.id.recyclerViewCategoryGame);
 
-        RecyclerViewAdapterSelectPlayer recyclerViewAdapterSelectPlayer = new RecyclerViewAdapterSelectPlayer(this.getContext(), Players.getPlayers(), 500);
-        recyclerViewPointingGame.setAdapter(recyclerViewAdapterSelectPlayer);
-        recyclerViewPointingGame.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        RecyclerViewAdapterSelectPlayer recyclerViewAdapterSelectPlayer = new RecyclerViewAdapterSelectPlayer(this.getContext(), Players.getPlayers(), -500);
+        recyclerViewCategoryGame.setAdapter(recyclerViewAdapterSelectPlayer);
+        recyclerViewCategoryGame.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
-        btnPointingGameDialogNobody = view.findViewById(R.id.btnPointingGameDialogNobody);
-        btnPointingGameDialogNobody.setOnClickListener(new View.OnClickListener() {
+        btnCategoryGameDialogNobody = view.findViewById(R.id.btnCategoryGameDialogNobody);
+        btnCategoryGameDialogNobody.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent;

@@ -12,8 +12,10 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.R;
+import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
 
 public class WhisperChallengeDialog extends AppCompatDialogFragment {
@@ -37,7 +39,11 @@ public class WhisperChallengeDialog extends AppCompatDialogFragment {
 
                 Players.increaseCoinsAllPlayers(100);
 
-                Intent intent = new Intent(getContext(), PlayerSelectionPhase.class);
+                Intent intent;
+
+                if (GameState.isGameOver()) intent = new Intent(getContext(), MainActivity.class);
+                else intent = new Intent(getContext(), PlayerSelectionPhase.class);
+
                 startActivity(intent);
             }
         });
@@ -49,7 +55,11 @@ public class WhisperChallengeDialog extends AppCompatDialogFragment {
 
                 Players.increaseCoinsAllPlayers(-100);
 
-                Intent intent = new Intent(getContext(), PlayerSelectionPhase.class);
+                Intent intent;
+
+                if (GameState.isGameOver()) intent = new Intent(getContext(), MainActivity.class);
+                else intent = new Intent(getContext(), PlayerSelectionPhase.class);
+
                 startActivity(intent);
             }
         });

@@ -2,18 +2,12 @@ package com.example.drinkinggame.gameActivities.whisperChallenge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.drinkinggame.MainActivity;
-import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.R;
-import com.example.drinkinggame.gameActivities.pointingGame.PointingGameDialog;
-import com.example.drinkinggame.models.GameState;
 import com.example.drinkinggame.models.Players;
-import com.example.drinkinggame.models.gameCards.PointingGameAlternatives;
 
 public class WhisperChallenge extends AppCompatActivity {
 

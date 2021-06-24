@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.drinkinggame.R;
-import com.example.drinkinggame.models.gameCards.PointingGameAlternatives;
 
 public class PointingGame extends AppCompatActivity {
 

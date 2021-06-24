@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPointingGame"
+        android:id="@+id/recyclerViewCategoryGame"
         android:layout_width="367dp"
         android:layout_height="557dp"
         android:background="@android:color/background_light"

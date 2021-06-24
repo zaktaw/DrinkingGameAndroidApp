@@ -42,7 +42,9 @@
     <string name="whisper_challenge_dialog_choice1">Ja</string>
     <string name="whisper_challenge_dialog_choice2">Nei</string>
 
-    <!-- whisper_challenge -->
+    <!-- category_game -->
     <string name="category_game_title">Kategorispillet</string>
     <string name="category_game_description">Kategorien er [CATEGORY]. Hver spiller bytter på å si et ord fra kategorien helt til en spiller bruker for lang tid eller ikke kommer på noe mer. [PLAYER] starter. Trykk på skjermen når dere er ferdig.</string>
+    <string name="category_game_dialog_description">Velg spilleren som tapte. Denne spilleren mister 500 coins og drikker tre slurker. Hvis ingen spiller tapte, velg "ingen".</string>
+    <string name="category_game_dialog_button">Ingen</string>
 </resources>

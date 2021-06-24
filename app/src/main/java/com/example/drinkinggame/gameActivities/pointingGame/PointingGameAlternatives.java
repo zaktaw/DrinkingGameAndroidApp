@@ -1,4 +1,4 @@
-package com.example.drinkinggame.models.gameCards;
+package com.example.drinkinggame.gameActivities.pointingGame;
 
 import java.util.ArrayList;
 import java.util.Collections;
