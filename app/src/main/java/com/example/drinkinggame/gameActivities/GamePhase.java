@@ -8,6 +8,7 @@ import com.example.drinkinggame.GameOverPhase;
 import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGame;
+import com.example.drinkinggame.gameActivities.charadesGame.CharadesGame;
 import com.example.drinkinggame.gameActivities.humSong.HumSong;
 import com.example.drinkinggame.gameActivities.pointingGame.PointingGame;
 import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
@@ -30,7 +31,7 @@ public class GamePhase {
         if (GameState.isGameOver()) intent = new Intent(context, GameOverPhase.class);
         else {
             // 1/4 chance to go to shop phase
-            if (random.nextInt(1) == 0) {
+            if (random.nextInt(4) == 0) {
                 intent = new Intent(context, PlayerSelectionPhase.class);
             }
             else {
@@ -59,6 +60,8 @@ public class GamePhase {
                 return TellJoke.class;
             case "HumSong" :
                 return HumSong.class;
+            case "CharadesGame" :
+                return CharadesGame.class;
             default :
                 return MainActivity.class;
         }

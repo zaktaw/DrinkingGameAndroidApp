@@ -1,4 +1,4 @@
-package com.example.drinkinggame.gameActivities.humSong;
+package com.example.drinkinggame.gameActivities.charadesGame;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,17 +12,17 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.example.drinkinggame.R;
 import com.example.drinkinggame.gameActivities.GamePhase;
-import com.example.drinkinggame.gameActivities.tellJoke.TellJokeDialog;
+import com.example.drinkinggame.gameActivities.humSong.HumSongDialog2;
 import com.example.drinkinggame.models.Player;
 
-public class HumSongDialog1 extends AppCompatDialogFragment {
+public class CharadesDialog1 extends AppCompatDialogFragment {
 
-    private Button btnHumSongYes;
-    private Button btnHumSongNo;
-    private Button btnHumSongSkip;
+    private Button btnCharadesYes;
+    private Button btnCharadesNo;
+    private Button btnCharadesSkip;
     private Player player;
 
-    public HumSongDialog1(Player player) {
+    public CharadesDialog1(Player player) {
         this.player = player;
     }
 
@@ -31,32 +31,32 @@ public class HumSongDialog1 extends AppCompatDialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.layout_hum_song_dialog, null);
+        View view = inflater.inflate(R.layout.layout_charades_game_dialog, null);
 
         builder.setView(view);
 
-        btnHumSongYes = view.findViewById(R.id.btnHumSongYes);
-        btnHumSongYes.setOnClickListener(new View.OnClickListener() {
+        btnCharadesYes = view.findViewById(R.id.btnCharadesYes);
+        btnCharadesYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.giveCoins(300);
-                HumSongDialog2 humSongDialog2 = new HumSongDialog2();
-                humSongDialog2.show(getFragmentManager(),"hum song dialog2");
+                player.giveCoins(500);
+                CharadesDialog2 charadesDialog2 = new CharadesDialog2();
+                charadesDialog2.show(getFragmentManager(),"charades dialog2");
             }
         });
 
-        btnHumSongNo = view.findViewById(R.id.btnHumSongNo);
-        btnHumSongNo.setOnClickListener(new View.OnClickListener() {
+        btnCharadesNo = view.findViewById(R.id.btnCharadesNo);
+        btnCharadesNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.giveCoins(-300);
+                player.giveCoins(-200);
                 Intent intent = GamePhase.goToNextGame(getContext());
                 startActivity(intent);
             }
         });
 
-        btnHumSongSkip = view.findViewById(R.id.btnHumSongSkip);
-        btnHumSongSkip.setOnClickListener(new View.OnClickListener() {
+        btnCharadesSkip = view.findViewById(R.id.btnCharadesSkip);
+        btnCharadesSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = GamePhase.goToNextGame(getContext());

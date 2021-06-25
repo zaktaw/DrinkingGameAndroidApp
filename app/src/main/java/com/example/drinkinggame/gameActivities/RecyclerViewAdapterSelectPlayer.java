@@ -23,12 +23,12 @@ public class RecyclerViewAdapterSelectPlayer extends RecyclerView.Adapter<Recycl
 
     ArrayList<Player> players;
     Context context;
-    int ammount; // ammout of coins to give player
+    int amount; // amount of coins to give player
 
-    public RecyclerViewAdapterSelectPlayer(Context context, ArrayList<Player> players, int ammount) {
+    public RecyclerViewAdapterSelectPlayer(Context context, ArrayList<Player> players, int amount) {
         this.context = context;
         this.players = players;
-        this.ammount = ammount;
+        this.amount = amount;
     }
 
     @NonNull
@@ -54,7 +54,7 @@ public class RecyclerViewAdapterSelectPlayer extends RecyclerView.Adapter<Recycl
                 else intent = new Intent(context, PlayerSelectionPhase.class);
 
                 Player player = Players.getPlayerByName(players.get(position).getName());
-                player.setCoins(player.getCoins() + ammount);
+                player.giveCoins(amount);
 
                 context.startActivity(intent);
             }

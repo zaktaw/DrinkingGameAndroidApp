@@ -28,7 +28,7 @@ public class HumSong extends AppCompatActivity {
 
     public void showDialog(View v) {
         HumSongDialog1 humSongDialog1 = new HumSongDialog1(player);
-        humSongDialog1.show(getSupportFragmentManager(), "tell joke dialog");
+        humSongDialog1.show(getSupportFragmentManager(), "hum song dialog");
     }
 
     private void setText() {

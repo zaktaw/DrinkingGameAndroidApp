@@ -16,7 +16,7 @@ public class StaticGames {
         games.add(new StaticGame("Gjeld", "[PLAYER] mister 500 coins.", true, -500, true));
         games.add(new StaticGame("Bursdag", "Alle sier bursdagsmåneden til spilleren til venstre for seg. Drikk tre slurker om du sier feil måned. [PLAYER] starter.", false, 0, false));
         games.add(new StaticGame("Jeg har aldri", "Hver spiller sier noe de aldri har gjort. Spillere som har gjort dette drikker en slurk. [PLAYER] starter.", false, 0, false));
-        games.add(new StaticGame("Waterfall", "Alle spillere begynner å chugge drikken sin. [PLAYER] kan velge når h*n vil slutte. Nå kan spilleren til høyre for [PLAYER] velge å avslutte. Dette fortsetter til ingen drikker mer.",false, 0, false));
+        games.add(new StaticGame("Waterfall", "Alle spillere begynner å chugge drikken sin. [PLAYER] kan velge når h*n vil slutte. Når [PLAYER] har avsluttet kan spilleren til høyre for [PLAYER] velge å avslutte. Dette fortsetter til ingen drikker lenger.",false, 0, false));
         Collections.shuffle(games);
         counter = 0;
     }

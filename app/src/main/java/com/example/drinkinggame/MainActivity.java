@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGameCategories;
+import com.example.drinkinggame.gameActivities.charadesGame.CharadesGameAlternatives;
 import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
 import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGames;
 import com.example.drinkinggame.models.GameState;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public GameState gameState;
     public PointingGameAlternatives pointingGameAlternatives;
     public CategoryGameCategories categoryGameCategories;
+    public CharadesGameAlternatives charadesGameCategories;
     public StaticGames staticGames;
 
     @Override
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         gameState = new GameState();
         pointingGameAlternatives = new PointingGameAlternatives();
         categoryGameCategories = new CategoryGameCategories();
+        charadesGameCategories = new CharadesGameAlternatives();
         staticGames = new StaticGames();
 
         players = new Players();
@@ -48,22 +51,27 @@ public class MainActivity extends AppCompatActivity {
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_7), 300));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_8), 800));
 
-        /*
         gameState.addGameCard("WhisperChallenge");
+        gameState.addGameCard("WhisperChallenge");
+        gameState.addGameCard("PointingGame");
+        gameState.addGameCard("PointingGame");
         gameState.addGameCard("PointingGame");
         gameState.addGameCard("CategoryGame");
         gameState.addGameCard("CategoryGame");
+        gameState.addGameCard("CategoryGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
-         */
-       // gameState.addGameCard("TellJoke");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("TellJoke");
         gameState.addGameCard("HumSong");
-        gameState.addGameCard("HumSong");
-        gameState.addGameCard("HumSong");
+        gameState.addGameCard("CharadesGame");
         GameState.shuffleGameCards();
     }
 
