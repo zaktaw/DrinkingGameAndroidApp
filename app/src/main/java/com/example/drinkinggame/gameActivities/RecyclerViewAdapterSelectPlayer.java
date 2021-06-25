@@ -48,10 +48,7 @@ public class RecyclerViewAdapterSelectPlayer extends RecyclerView.Adapter<Recycl
             @Override
             public void onClick(View v) {
 
-                Intent intent;
-
-                if (GameState.isGameOver()) intent = new Intent(context, MainActivity.class);
-                else intent = new Intent(context, PlayerSelectionPhase.class);
+                Intent intent = GamePhase.goToNextGame(v.getContext());
 
                 Player player = Players.getPlayerByName(players.get(position).getName());
                 player.giveCoins(amount);
