@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_7), 300));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_8), 800));
 
+        /*
         gameState.addGameCard("WhisperChallenge");
         gameState.addGameCard("PointingGame");
         gameState.addGameCard("CategoryGame");
@@ -58,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
+         */
+        gameState.addGameCard("TellJoke");
+        gameState.addGameCard("TellJoke");
+        gameState.addGameCard("TellJoke");
         GameState.shuffleGameCards();
     }
 

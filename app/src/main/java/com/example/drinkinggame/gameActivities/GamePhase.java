@@ -10,8 +10,11 @@ import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGame;
 import com.example.drinkinggame.gameActivities.pointingGame.PointingGame;
 import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
+import com.example.drinkinggame.gameActivities.tellJoke.TellJoke;
 import com.example.drinkinggame.gameActivities.whisperChallenge.WhisperChallenge;
 import com.example.drinkinggame.models.GameState;
+import com.example.drinkinggame.models.Player;
+import com.example.drinkinggame.models.Players;
 
 import java.util.Random;
 
@@ -26,7 +29,7 @@ public class GamePhase {
         if (GameState.isGameOver()) intent = new Intent(context, GameOverPhase.class);
         else {
             // 1/4 chance to go to shop phase
-            if (random.nextInt(4) == 0) {
+            if (random.nextInt(1) == 0) {
                 intent = new Intent(context, PlayerSelectionPhase.class);
             }
             else {
@@ -51,8 +54,17 @@ public class GamePhase {
                 return CategoryGame.class;
             case "StaticGame" :
                 return StaticGameActivity.class;
+            case "TellJoke" :
+                return TellJoke.class;
             default :
                 return MainActivity.class;
         }
+    }
+
+    // replaces all occurces of [PLAYER] in a card text with an actual player name and returns the card text
+    public static String insertPlayer(String cardText) {
+        String playerName = Players.getRandomPlayer().getName();
+        String cardTextEdited = cardText.replaceAll("\\[PLAYER]", playerName);
+        return cardTextEdited;
     }
 }

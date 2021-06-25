@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrinkingGame">
-        <activity android:name=".GameOverPhase"></activity>
+        <activity android:name=".gameActivities.tellJoke.TellJoke"></activity>
+        <activity android:name=".GameOverPhase" />
         <activity android:name=".gameActivities.staticGameActivity.StaticGameActivity" />
         <activity android:name=".gameActivities.categoryGame.CategoryGame" />
         <activity android:name=".gameActivities.pointingGame.PointingGame" />

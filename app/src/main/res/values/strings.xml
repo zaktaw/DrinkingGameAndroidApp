@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Yet Another Piccolo App!</string>
 
+    <!-- general -->
+    <string name="button_yes">Ja</string>
+    <string name="button_no">Nei</string>
+    <string name="button_skip">Hopp over</string>
+
     <!-- main_activity -->
     <string name="btn_add_players">Legg til spillere</string>
     <string name="game_title">Yet Another Piccolo App!</string>
@@ -38,19 +43,20 @@
     <!-- pointing_game -->
     <string name="title_pointing_game">Pekeleken</string>
     <string name="page1_pointing_game">Pek på spilleren som [ALTERNATIVE]. Trykk på skjermen når dette er gjort.</string>
-    <string name="pointing_game_dialog_description">Velg spilleren som flest pekte på. Denne spilleren får 300 coins og kan dele ut 3 slurker. Hvis gruppen ikke ble enig om én enkelt spiller, velg "ingen".</string>
-    <string name="pointing_game_dialog_button">Ingen</string>
+    <string name="pointing_game_dialog_description">Velg spilleren som flest pekte på. Denne spilleren får 300 coins og kan dele ut 3 slurker. Hvis gruppen ikke ble enig om én enkelt spiller, velg "hopp over".</string>
 
     <!-- whisper_challenge -->
     <string name="whisper_challenge_title">Hviskeleken</string>
     <string name="whisper_challenge_description">[PLAYER] finner på et ord og hvisker det til personen til høyre for seg. Dette gjentas til ordet har gått helt rundt til [PLAYER]. Trykk på skjermen når dette er gjort.</string>
     <string name="whisper_challenge_dialog_description">Hvis ordet gikk hele runden rundt uten å forandres: gruppen tar en felles-skål og mottar 100 coins hver. Hvis ikke mister alle 100 coins. Gikk ordet rundt uten å forandres?</string>
-    <string name="whisper_challenge_dialog_choice1">Ja</string>
-    <string name="whisper_challenge_dialog_choice2">Nei</string>
 
     <!-- category_game -->
     <string name="category_game_title">Kategorispillet</string>
     <string name="category_game_description">Kategorien er [CATEGORY]. Hver spiller bytter på å si et ord fra kategorien helt til en spiller bruker for lang tid eller ikke kommer på noe mer. [PLAYER] starter. Trykk på skjermen når dere er ferdig.</string>
-    <string name="category_game_dialog_description">Velg spilleren som tapte. Denne spilleren mister 500 coins og drikker tre slurker. Hvis ingen spiller tapte, velg "ingen".</string>
-    <string name="category_game_dialog_button">Ingen</string>
+    <string name="category_game_dialog_description">Velg spilleren som tapte. Denne spilleren mister 500 coins og drikker tre slurker.</string>
+
+    <!-- tell_joke -->
+    <string name="tell_joke_title">Fortell en vits</string>
+    <string name="tell_joke_description">[PLAYER] forteller en vits. Trykk på skjermen når dette er gjort.</string>
+    <string name="tell_joke_dialog_description">Hvis ingen lo av vitsen drikker spilleren som fortalte vitsen fem slurker og mister 300 coins. Hvis noen lo kan spilleren dele ut fem slurker og mottar 300 coins. Lo noen av vitsen?</string>
 </resources>
