@@ -60,9 +60,10 @@ public class MainActivity extends AppCompatActivity {
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
          */
-        gameState.addGameCard("TellJoke");
-        gameState.addGameCard("TellJoke");
-        gameState.addGameCard("TellJoke");
+       // gameState.addGameCard("TellJoke");
+        gameState.addGameCard("HumSong");
+        gameState.addGameCard("HumSong");
+        gameState.addGameCard("HumSong");
         GameState.shuffleGameCards();
     }
 

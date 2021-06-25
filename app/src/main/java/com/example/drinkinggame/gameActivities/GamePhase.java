@@ -8,6 +8,7 @@ import com.example.drinkinggame.GameOverPhase;
 import com.example.drinkinggame.MainActivity;
 import com.example.drinkinggame.PlayerSelectionPhase;
 import com.example.drinkinggame.gameActivities.categoryGame.CategoryGame;
+import com.example.drinkinggame.gameActivities.humSong.HumSong;
 import com.example.drinkinggame.gameActivities.pointingGame.PointingGame;
 import com.example.drinkinggame.gameActivities.staticGameActivity.StaticGameActivity;
 import com.example.drinkinggame.gameActivities.tellJoke.TellJoke;
@@ -56,6 +57,8 @@ public class GamePhase {
                 return StaticGameActivity.class;
             case "TellJoke" :
                 return TellJoke.class;
+            case "HumSong" :
+                return HumSong.class;
             default :
                 return MainActivity.class;
         }

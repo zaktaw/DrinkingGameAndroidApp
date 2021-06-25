@@ -59,4 +59,10 @@
     <string name="tell_joke_title">Fortell en vits</string>
     <string name="tell_joke_description">[PLAYER] forteller en vits. Trykk på skjermen når dette er gjort.</string>
     <string name="tell_joke_dialog_description">Hvis ingen lo av vitsen drikker spilleren som fortalte vitsen fem slurker og mister 300 coins. Hvis noen lo kan spilleren dele ut fem slurker og mottar 300 coins. Lo noen av vitsen?</string>
+
+    <!-- hum_song -->
+    <string name="hum_song_title">Nynn på den sang</string>
+    <string name="hum_song_description">[PLAYER] nynner på en sang og de andre prøver å være den første til å gjette hvilken sang det er.</string>
+    <string name="hum_song_dialog_description">Hvis noen klarte å gjette riktig sang får spilleren som sang 300 coins og kan dele ut fem slurker. Hvis ingen gjettet riktig mister spilleren 300 coins og må drikke fem slurker. Klarte noen å gjette riktig?</string>
+    <string name="hum_song_dialog2_description">Velg spilleren som klarte å gjette sangen. Denne spilleren får også 300 coins og kan dele ut fem slurker.</string>
 </resources>
