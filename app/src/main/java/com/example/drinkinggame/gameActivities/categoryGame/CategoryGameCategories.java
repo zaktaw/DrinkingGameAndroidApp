@@ -12,6 +12,15 @@ public class CategoryGameCategories {
         this.categories.add("drinker");
         this.categories.add("fotball-klubber");
         this.categories.add("øl-merker");
+        this.categories.add("musikk-sjangere");
+        this.categories.add("film-sjangere");
+        this.categories.add("musikk-instrumenter");
+        this.categories.add("sykdommer");
+        this.categories.add("sex-stillinger");
+        this.categories.add("studieretninger på universitet");
+        this.categories.add("måter å dø på");
+        this.categories.add("land i Europa");
+        this.categories.add("norske kommuner");
         Collections.shuffle(categories);
         counter = 0;
     }

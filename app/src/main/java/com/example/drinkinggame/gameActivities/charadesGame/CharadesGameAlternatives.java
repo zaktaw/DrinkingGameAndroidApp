@@ -13,6 +13,16 @@ public class CharadesGameAlternatives {
         this.alternatives.add("en full person");
         this.alternatives.add("en stripper");
         this.alternatives.add("en vekter");
+        this.alternatives.add("et spøkelse");
+        this.alternatives.add("en ballong");
+        this.alternatives.add("et monster");
+        this.alternatives.add("en banan");
+        this.alternatives.add("en trampoline");
+        this.alternatives.add("en hval");
+        this.alternatives.add("basketball");
+        this.alternatives.add("en klovn");
+        this.alternatives.add("en lyspære");
+        this.alternatives.add("et helikopter");
         Collections.shuffle(alternatives);
         counter = 0;
     }

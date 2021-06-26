@@ -50,15 +50,23 @@ public class MainActivity extends AppCompatActivity {
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_6), 300));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_7), 300));
         ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_8), 800));
+        ShopObjects.addShopObject(new ShopObject(getString(R.string.shop_object_9), 800));
 
         gameState.addGameCard("WhisperChallenge");
         gameState.addGameCard("WhisperChallenge");
+
         gameState.addGameCard("PointingGame");
         gameState.addGameCard("PointingGame");
         gameState.addGameCard("PointingGame");
+        gameState.addGameCard("PointingGame");
+        gameState.addGameCard("PointingGame");
+
         gameState.addGameCard("CategoryGame");
         gameState.addGameCard("CategoryGame");
         gameState.addGameCard("CategoryGame");
+        gameState.addGameCard("CategoryGame");
+        gameState.addGameCard("CategoryGame");
+
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
@@ -69,8 +77,23 @@ public class MainActivity extends AppCompatActivity {
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
         gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+        gameState.addGameCard("StaticGame");
+
         gameState.addGameCard("TellJoke");
+        gameState.addGameCard("TellJoke");
+
         gameState.addGameCard("HumSong");
+        gameState.addGameCard("HumSong");
+
+        gameState.addGameCard("CharadesGame");
+        gameState.addGameCard("CharadesGame");
         gameState.addGameCard("CharadesGame");
         GameState.shuffleGameCards();
     }
